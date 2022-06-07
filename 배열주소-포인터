@@ -1,0 +1,22 @@
+//
+#include <stdio.h>
+#include<string.h>
+struct DJI{
+    int price;
+    char class;
+    char name[100];
+};
+int main()
+{
+    int arr[5]={1,2,3,4,5};
+    int *ptr;
+    
+    //for(int i;i<sizeof(arr)/4;i++) 
+    ptr=&arr[0]; // 주소 여러번 할당하면 에러 발생.
+    
+    for(int i=0;i<sizeof(arr)/4;i++)
+    printf("arr[%d] = %d, (address:%p)\n",i,*ptr+i,ptr+i);
+    
+
+    return 0;
+}
